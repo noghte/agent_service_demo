@@ -1,0 +1,6 @@
+agent-governance-toolkit-core==4.1.0
+requests>=2.32.4,<3
+python-dotenv>=1.0,<2
+jupyterlab>=4.3,<5
+nbformat>=5.10,<6
+ipykernel>=6.29,<8

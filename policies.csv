@@ -1,0 +1,5 @@
+policy_id,category,policy_text,effect,condition,owner
+POL-001,Response,Drafting a support response is allowed; sending messages or changing accounts is outside this demo.,allow,action.type == 'draft_response',Support
+POL-002,Human Review,Recording a human escalation is allowed.,allow,action.type == 'escalate',Support
+POL-003,Auto-Closure,Tickets awaiting a customer response may be closed after 5 business days of inactivity.,allow,action.type == 'close_ticket' and facts.awaiting_customer and facts.inactivity_days >= 5,Operations
+POL-004,Auto-Closure,General Inquiry tickets must remain open for at least 10 business days before automatic closure.,deny,action.type == 'close_ticket' and facts.category == 'General Inquiry' and facts.inactivity_days < 10,Support
